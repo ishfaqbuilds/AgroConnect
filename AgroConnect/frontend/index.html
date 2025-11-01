@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroConnect - Smart Farm-to-City Network</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <h1>🌾 AgroConnect</h1>
+          <p class="navbar-tagline">The Smart Farm2City Network!</p>
+        </div>
+        <a href="Authentication/auth.html" class="btn-primary" style="text-decoration: none"
+          >Login / Sign Up</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Connecting Farms to Cities</h2>
+        <p>Direct, transparent, and fair trade between farmers and buyers</p>
+        <div class="hero-actions">
+          <a
+            href="Authentication/auth.html?role=farmer"
+            class="btn-large btn-primary"
+            style="text-decoration: none; display: inline-block"
+            >I'm a Farmer</a
+          >
+          <a
+            href="Authentication/auth.html?role=buyer"
+            class="btn-large btn-secondary"
+            style="text-decoration: none; display: inline-block"
+            >I'm a Buyer</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Why AgroConnect?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="icon">🚜</span>
+            <h3>For Farmers</h3>
+            <p>
+              Create digital stalls, set fair prices, reach urban buyers
+              directly
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="icon">🏪</span>
+            <h3>For Buyers</h3>
+            <p>Access fresh produce, verified farmers, transparent pricing</p>
+          </div>
+          <div class="feature-card">
+            <span class="icon">✅</span>
+            <h3>Trust & Transparency</h3>
+            <p>Verified users, real-time tracking, fair dispute resolution</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Firebase SDK (for checking auth state) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Config -->
+    <script src="Authentication/firebase/config.js"></script>
+    <script src="Authentication/firebase/auth.js"></script>
+    <script src="Authentication/firebase/firestore.js"></script>
+
+    <!-- Check if user is already logged in -->
+    <script>
+      onAuthChange(async (user) => {
+        if (user) {
+          const userData = await getUserById(user.uid);
+          if (userData) {
+            // Redirect to marketplace
+            window.location.href = "MainInterface/marketplace.html";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
