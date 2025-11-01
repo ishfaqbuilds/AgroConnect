@@ -1,0 +1,93 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║           🌾 AGROCONNECT - QUICK START GUIDE 🌾              ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📁 YOUR PROJECT STRUCTURE (Simple & Clean!)
+═══════════════════════════════════════════════════════════════
+
+AgroConnect/
+├── index.html          ← Main page (start here!)
+├── styles.css          ← All your styles
+├── config.js           ← Firebase & Cloudinary setup
+├── app.js              ← Main logic
+├── features/           ← Empty (for future features)
+├── firebase.json       ← Firebase config
+├── firestore.rules     ← Database security
+├── package.json        ← Dependencies
+└── README.md           ← Full guide (READ THIS!)
+
+═══════════════════════════════════════════════════════════════
+
+🚀 GET STARTED IN 3 STEPS
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Install Dependencies
+   npm install
+
+STEP 2: Setup Firebase & Cloudinary
+   - Follow README.md "Step 4" for Firebase
+   - Follow README.md "Step 5" for Cloudinary
+   - Update config.js with your credentials
+
+STEP 3: Run Locally
+   python -m http.server 8000
+   OR
+   npx http-server -p 8000
+
+   Open: http://localhost:8000
+
+═══════════════════════════════════════════════════════════════
+
+📝 WHAT TO EDIT
+═══════════════════════════════════════════════════════════════
+
+1. config.js
+   - Add your Firebase credentials
+   - Add your Cloudinary credentials
+
+2. index.html
+   - Customize text and content
+
+3. styles.css
+   - Change colors and design
+
+4. app.js
+   - Add your features here
+
+═══════════════════════════════════════════════════════════════
+
+🎯 NEXT STEPS (Build Features One by One)
+═══════════════════════════════════════════════════════════════
+
+Week 1: Create farmer-dashboard.html
+Week 2: Add product upload feature
+Week 3: Create buyer-dashboard.html
+Week 4: Add order system
+Week 5: Create admin-dashboard.html
+Week 6: Polish and deploy!
+
+═══════════════════════════════════════════════════════════════
+
+💡 TIPS
+═══════════════════════════════════════════════════════════════
+
+✓ Read README.md for detailed instructions
+✓ Test after each small change
+✓ Use browser console (F12) to see errors
+✓ Google error messages - they help!
+✓ Take breaks - coding is a marathon, not a sprint
+
+═══════════════════════════════════════════════════════════════
+
+🆘 NEED HELP?
+═══════════════════════════════════════════════════════════════
+
+Check README.md section: "Common Issues & Solutions"
+
+═══════════════════════════════════════════════════════════════
+
+Good luck! You've got this! 💪🚀
+
+═══════════════════════════════════════════════════════════════
